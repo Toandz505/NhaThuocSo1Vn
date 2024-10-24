@@ -1,0 +1,27 @@
+﻿@model GameStore.Models.DanhMuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/layoutAdmin.cshtml";
+}
+
+<h2>Thông tin chi tiết</h2>
+
+<div>
+    <h4>DanhMuc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenDM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenDM)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maDM }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
